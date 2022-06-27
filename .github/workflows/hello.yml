@@ -1,0 +1,13 @@
+name: HELLO
+on:
+  push:
+jobs:
+  TEST:
+    runs-on: self-hosted
+    steps:
+      - name: Test Command
+        shell: tcsh {0}
+        run: |
+          echo "GitHub Runner running test stage"
+          echo "cat /dev/urandom|tr -cd 'a-f0-9' |head -c 32"> /tmp/sourceme
+          source /tmp/sourceme
