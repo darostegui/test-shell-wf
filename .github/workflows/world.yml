@@ -10,7 +10,7 @@ jobs:
         run: |
           echo "GitHub Runner running test stage"
           
-          echo "set result = `cat /dev/urandom|tr -cd 'a-f0-9' |head -c 32`\necho $result"> /tmp/sourceme
+          echo "set result = `cat /dev/urandom|tr -cd 'a-f0-9' |head -c 32`\necho \"$result\""> /tmp/sourceme
           chmod +x /tmp/sourceme
           "/tmp/sourceme"
 
