@@ -9,7 +9,7 @@ jobs:
         shell: tcsh {0}
         run: |
           echo "GitHub Runner running test stage"
-          echo "echo 'cat /dev/urandom|tr -cd \'a-f0-9\' |head -c 32'"> /tmp/sourceme
+          echo "echo 'cat /dev/urandom|tr -cd 'a-f0-9' |head -c 32'"> /tmp/sourceme
           cat /tmp/sourceme
           source /tmp/sourceme
 
